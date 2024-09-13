@@ -5,25 +5,25 @@
 
  ## Ejecutar Backend
 
- -navegar al directorio del proyecto backend
+ - navegar al directorio del proyecto backend
 
 ### Requisitos Previos
 
--.NET SDK: Asegúrate de tener el .NET SDK instalado en tu máquina.
+- .NET SDK: Asegúrate de tener el .NET SDK instalado en tu máquina.
 
--SQL Server: Necesitarás una instancia de SQL Server en funcionamiento. Puedes usar SQL Server Express o LocalDB para pruebas locales.
+- SQL Server: Necesitarás una instancia de SQL Server en funcionamiento. Puedes usar SQL Server Express o LocalDB para pruebas locales.
 
--Herramienta de Línea de Comandos: Asegúrate de tener dotnet en tu PATH para ejecutar comandos desde la terminal.
+- Herramienta de Línea de Comandos: Asegúrate de tener dotnet en tu PATH para ejecutar comandos desde la terminal.
 
 ### Restaurar Paquetes
--Ejecuta el siguiente comando para restaurar las dependencias del proyecto: dotnet restore
+- Ejecuta el siguiente comando para restaurar las dependencias del proyecto: dotnet restore
 
 ### Crear y Aplicar Migraciones
 
-*Crea las migraciones iniciales y actualiza la base de datos con el siguiente comando
--dotnet ef migrations add InitialCreate
--dotnet ef database update
+* Crea las migraciones iniciales y actualiza la base de datos con el siguiente comando
+- dotnet ef migrations add InitialCreate
+- dotnet ef database update
 
 ### Ejecutar el Proyecto
-*Para ejecutar el proyecto, utiliza el siguiente comando
--dotnet run
+* Para ejecutar el proyecto, utiliza el siguiente comando
+- dotnet run
