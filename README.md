@@ -93,3 +93,57 @@ dotnet clean
 dotnet build
 dotnet run
 ```
+
+# FronEnd
+
+## Descripcion 
+
+Nombre del Proyecto: Product Management Application
+
+Descripción:
+La aplicación Product Management es una plataforma que permite a los usuarios ver una lista de productos, marcarlos como favoritos y visualizarlos en una sección separada. La aplicación está diseñada para ofrecer una experiencia de usuario intuitiva y moderna, con una interfaz responsiva y fácil de usar.
+
+## Tecnologias utilizadas
+- FrontEnd
+    - React: Biblioteca de JavaScript para construir interfaces de usuario.
+    - Ionic: Framework para construir aplicaciones móviles y web con una experiencia nativa.
+    - TypeScript: Superset de JavaScript que añade tipado estático.
+    - CSS: Para la estilización de los componentes y la aplicación en general.
+- Backend
+    - API Service: Servicios para interactuar con la API, obtener productos, manejar favoritos, etc.
+    - Fetch API / Axios: Para realizar solicitudes HTTP.
+- Otros
+    - SCSS / CSS Modules: Para manejar estilos de manera modular y organizada.
+    - React Router: Para la navegación entre diferentes vistas de la aplicación.
+
+## Patrones de Diseño Utilizados
+
+- Componente de Carga (Loading Spinner):
+Un componente dedicado para mostrar un spinner de carga mientras los datos se están recuperando. Mejora la experiencia de usuario al proporcionar una indicación visual de que los datos están en proceso de carga.
+
+- Separación de Preocupaciones:
+La aplicación está organizada en componentes funcionales, cada uno encargado de una responsabilidad específica (e.g., ProductList, FavoritesList). Esto permite un código más modular y fácil de mantener.
+
+- Estado Local y Efectos (Hooks):
+Se utiliza el hook useState para manejar el estado local de los productos y favoritos, y useEffect para realizar la carga de datos cuando el componente se monta.
+
+- Condicionales en Renderizado:
+Se manejan diferentes estados de la aplicación (cargando, mostrando productos, etc.) mediante renderizado condicional, mejorando la interacción y experiencia del usuario.
+
+## Requisitos previos
+1. Node.js y npm - v20.12.2
+2. Git
+3. Ionic - 7.2.0
+
+## Como ejecutar el FrontEnd
+
+1. Instalar Dependencias:
+Navega al directorio del proyecto y ejecuta:
+```sh
+npm install
+```
+
+2. Ejecutar la Aplicación:
+```sh
+npm run dev
+```
