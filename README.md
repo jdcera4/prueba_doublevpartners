@@ -16,14 +16,23 @@
 - Herramienta de Línea de Comandos: Asegúrate de tener dotnet en tu PATH para ejecutar comandos desde la terminal.
 
 ### Restaurar Paquetes
-- Ejecuta el siguiente comando para restaurar las dependencias del proyecto: dotnet restore
+- Ejecuta el siguiente comando para restaurar las dependencias del proyecto: 
+```sh
+dotnet restore
+```
 
 ### Crear y Aplicar Migraciones
 
 * Crea las migraciones iniciales y actualiza la base de datos con el siguiente comando
-- dotnet ef migrations add InitialCreate
-- dotnet ef database update
+```sh
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
 
 ### Ejecutar el Proyecto
 * Para ejecutar el proyecto, utiliza el siguiente comando
-- dotnet run
+```sh
+dotnet clean
+dotnet build
+dotnet run
+```
