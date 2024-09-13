@@ -1,14 +1,27 @@
 import axios from 'axios';
 
-export interface Product {
-  id: number;
-  name: string;
-  price: number;
-}
+export interface Category {
+    id: number;
+    name: string;
+    image: string;
+    creationAt: string;
+    updatedAt: string;
+  }
+  
+  export interface Product {
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    images: string[];  // Es un array de strings
+    creationAt: string;
+    updatedAt: string;
+    category: Category;
+  }
 
 // Configuración de la base URL para la API
 const api = axios.create({
-  baseURL: 'https://fakeapi.platzi.com/'  // URL base de la API
+  baseURL: 'https://api.escuelajs.co/api/v1/'  // URL base de la API
 });
 
 // Función para obtener todos los productos
