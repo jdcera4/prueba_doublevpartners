@@ -6,7 +6,7 @@ import {
   IonImg,
 } from '@ionic/react';
 import { getFavoriteProducts, removeFavoriteProduct, Product } from '../services/apiService';
-import './FavoritesList.css'; // Importa el archivo CSS específico
+import './FavoritesList.css';
 
 const FavoritesList: React.FC = () => {
   const [favorites, setFavorites] = useState<Product[]>([]);
@@ -26,7 +26,7 @@ const FavoritesList: React.FC = () => {
       <div className="favorites-list">
         {favorites.length > 0 ? (
           favorites.map(product => {
-            const categoryImageUrl = product.category.image; // Usar la imagen de la categoría
+            const categoryImageUrl = product.category.image;
             return (
               <IonCard key={product.id} className="favorites-card">
                 {categoryImageUrl && <IonImg className="favorites-img" src={categoryImageUrl} alt={product.title} />}

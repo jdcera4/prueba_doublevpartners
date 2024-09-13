@@ -82,7 +82,7 @@ const ProductList: React.FC = () => {
       <div className="product-list">
         {filteredProducts.length > 0 ? (
           filteredProducts.map(product => {
-            const categoryImageUrl = product.category.image; // Usar la imagen de la categoría
+            const categoryImageUrl = product.category.image;
             return (
               <IonCard key={product.id} className="product-card">
                 {categoryImageUrl && <IonImg className="product-img" src={categoryImageUrl} alt={product.title} />}

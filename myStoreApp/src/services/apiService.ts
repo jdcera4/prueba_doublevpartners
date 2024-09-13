@@ -1,23 +1,5 @@
 import axios from 'axios';
-
-export interface Category {
-    id: number;
-    name: string;
-    image: string;
-    creationAt: string;
-    updatedAt: string;
-  }
-  
-  export interface Product {
-    id: number;
-    title: string;
-    price: number;
-    description: string;
-    images: string[];  // Es un array de strings
-    creationAt: string;
-    updatedAt: string;
-    category: Category;
-  }
+import { Product } from '../interfaces/Product';
 
 // Configuración de la base URL para la API
 const api = axios.create({
