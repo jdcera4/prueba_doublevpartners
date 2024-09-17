@@ -8,7 +8,8 @@ import {
   IonLabel,
   IonItem,
 } from '@ionic/react';
-import { getProducts, saveFavoriteProduct, getFavoriteProducts, removeFavoriteProduct, Product } from '../services/apiService';
+import { getProducts, saveFavoriteProduct, getFavoriteProducts, removeFavoriteProduct } from '../services/apiService';
+import { Product } from '../interfaces/Product';
 import './ProductList.css';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -82,10 +83,11 @@ const ProductList: React.FC = () => {
       <div className="product-list">
         {filteredProducts.length > 0 ? (
           filteredProducts.map(product => {
-            const categoryImageUrl = product.category.image;
+            const categoryImageUrl = product.images[0].replace(/[\[\]'""]+/g, '');
+            console.log(categoryImageUrl)
             return (
               <IonCard key={product.id} className="product-card">
-                {categoryImageUrl && <IonImg className="product-img" src={categoryImageUrl} alt={product.title} />}
+                {categoryImageUrl && <img className="product-img" src={categoryImageUrl.replace(/'/g, '')} alt={product.title} />}
                 <IonCardContent className="product-info">
                   <div className="product-title">{product.title}</div>
                   <div className="product-description">{product.description}</div>
